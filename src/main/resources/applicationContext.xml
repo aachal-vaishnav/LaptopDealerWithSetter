@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Processor beans -->
+    <bean id="i3" class="com.example.LaptopDealerWithSetter.I3"/>
+    <bean id="i5" class="com.example.LaptopDealerWithSetter.I5"/>
+    <bean id="i7" class="com.example.LaptopDealerWithSetter.I7"/>
+
+    <!-- Dell -->
+    <bean id="dellwithi3" class="com.example.LaptopDealerWithSetter.Dell">
+        <property name="processors" ref="i3"/>
+    </bean>
+    <bean id="dellwithi5" class="com.example.LaptopDealerWithSetter.Dell">
+        <property name="processors" ref="i5"/>
+    </bean>
+    <bean id="dellwithi7" class="com.example.LaptopDealerWithSetter.Dell">
+        <property name="processors" ref="i7"/>
+    </bean>
+
+    <!-- MacBook -->
+    <bean id="macBookwithi3" class="com.example.LaptopDealerWithSetter.MacBook">
+        <property name="processors" ref="i3"/>
+    </bean>
+    <bean id="macBookwithi5" class="com.example.LaptopDealerWithSetter.MacBook">
+        <property name="processors" ref="i5"/>
+    </bean>
+    <bean id="macBookwithi7" class="com.example.LaptopDealerWithSetter.MacBook">
+        <property name="processors" ref="i7"/>
+    </bean>
+
+    <!-- Microsoft -->
+    <bean id="microsoftLaptopi3" class="com.example.LaptopDealerWithSetter.MicrosoftLaptop">
+        <property name="processors" ref="i3"/>
+    </bean>
+    <bean id="microsoftLaptopi5" class="com.example.LaptopDealerWithSetter.MicrosoftLaptop">
+        <property name="processors" ref="i5"/>
+    </bean>
+    <bean id="microsoftLaptopi7" class="com.example.LaptopDealerWithSetter.MicrosoftLaptop">
+        <property name="processors" ref="i7"/>
+    </bean>
+
+</beans>
